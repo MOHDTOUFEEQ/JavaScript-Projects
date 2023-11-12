@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* You can choose your preferred font-family */
+}
+
+.main {
+    top: 0;
+    height: 400px;
+    width: 100%; /* Use percentage for responsiveness */
+    padding: 20px; /* Adjust padding for smaller screens */
+    background-color: #1C815A;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Center navigation items */
+    align-items: center; /* Vertically align items */
+    color: white;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center list items */
+    gap: 20px; /* Reduce gap for smaller screens */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 20px;
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+}
+
+.main3 {
+    text-align: center;
+    color: white;
+    font-size: large; /* Adjust font size for smaller screens */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Center content */
+    align-items: center; /* Vertically align content */
+    margin: 0 auto; /* Center horizontally */
+}
+
+button {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    margin: auto;
+}
+
+.submit {
+    display: flex;
+    justify-content: center; /* Center submit button */
+}
+
+hr {
+    color: aliceblue;
+    margin: 10px auto;
+    width: 70%;
+}
+i{
+    cursor: pointer;
+}
+.copied {
+    animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
