@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: rgb(255, 127, 148);">
+    <div class="container">
+    <div class="header">
+        <div class="left_arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="bar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="photo">
+        <div id="img_">
+            
+        </div>
+    </div>
+    <div class="title">
+        <h2>Tu Hi Haqeeqat</h2>
+    </div>
+    <div class="audio">
+        <audio controls id="song">
+            <source src="y2mate.is - Tu Hi Haqeeqat Full Video Tum Mile Emraan Hashmi Soha Ali Khan Pritam Javed Ali Shadab-x3bJeJDgRJQ-192k-1691429606.mp3">
+        </audio>
+    </div>
+    <div class="range">
+    <input type="range" value="0" id="progess">
+    
+</div>
+<div class="footer">
+    <div class="backward">
+        <i style="height: 20px; width: 20px;" class="fa-solid fa-backward"></i>
+    </div>
+    <div id="play__">
+        <i class="fa-solid fa-play" id="play_" ></i>
+    </div>
+    <div class="forward">
+        <i class="fa-solid fa-forward"></i>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    let progess = document.getElementById("progess")
+    let song = document.getElementById("song")
+    const play = document.getElementById("play_")
+    const play_ = document.getElementById("play__")
+
+    song.onloadedmetadata = function () {
+        progess.max = song.duration;
+        progess.value = song.currentTime;
+    }
+
+    play_.addEventListener('click',function () {
+        if (play.classList.contains("fa-pause")) {
+            song.pause()
+            play.classList.remove("fa-pause");
+            play.classList.add("fa-play");
+        } else {
+            song.play();
+            play.classList.remove("fa-play");
+            play.classList.add("fa-pause");
+        }
+    })
+
+
+
+song.addEventListener("timeupdate",function () {
+    progess.value  = song.currentTime
+    progess.max = song.duration;
+})
+
+progess.onchange = function () {
+    song.play();
+    song.currentTime = progess.value;
+}
+// progess.addEventListener("input",function () {
+//     song.play();
+//     song.currentTime = progess.value;
+// })
+// </script>
+</html>
