@@ -1,0 +1,58 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.container{
+    min-height: 400px;
+    height: auto;
+    width: 600px;
+    margin: 4rem auto;
+    background-color: white;   
+    border-radius: 5px;
+    padding: 12px;
+}
+h1{
+    padding: 30px;
+}
+hr{
+    margin: 10px;
+}
+h2{
+    text-align: left;
+}
+.answer-button button{
+    display: block;
+    border: 2px solid black;
+    width: 100%;
+    text-align: left;
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: #fff;
+}
+.answer-button button:hover:not([disabled]){
+    background-color: beige;
+}
+.answer-button button:disabled{
+    cursor: not-allowed;
+}
+.next{
+    background-color: #fff;
+    padding: 7px;
+    margin: 20px 0px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    position: relative;
+    left: 40%;
+    right: 50%;
+    background-color: #001e4d;
+    justify-content: center;
+    cursor: pointer;
+}
+.answer-button .correct{
+    background-color: #22ffc8;
+}
+.answer-button .incorrect{
+    background-color: #d31d1d;
+}
