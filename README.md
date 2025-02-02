@@ -14,4 +14,4 @@ This repository contains a collection of small JavaScript projects that showcase
 ## 🚀 How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MOHDTOUFEEQ/js-projects.git
+   git clone https://github.com/MOHDTOUFEEQ/JavaScript-Projects.git
